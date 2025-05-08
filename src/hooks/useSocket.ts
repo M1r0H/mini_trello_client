@@ -33,11 +33,7 @@ export const useSocket = () => {
     socket.on('taskDeleted', () => {
       load();
     });
-
-    return () => {
-      socket.disconnect();
-    };
-  }, [load]);
+  }, []);
 
   return { socket };
 };
